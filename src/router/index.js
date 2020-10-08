@@ -1,25 +1,62 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Ctiry from '../views/Ctiry.vue'
+import Logo from '../views/Logo.vue'
+import Sousuo from '../views/Sousuo.vue'
+import Msite from '../views/Msite.vue'
+import Wode from '../views/Wode.vue'
+import Weimai from '../views/Weimai.vue'
+import Dingdan from '../views/Dingdan.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    redirect:'Ctiry'
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: function () {
-      return import(/* webpackChunkName: "about" */ '../views/About.vue')
-    }
-  }
+    path: '/Weimai',
+    name: 'Weimai',
+    component: Weimai
+  },
+
+  {
+    path: '/Dingdan',
+    name: 'Dingdan',
+    component: Dingdan
+  },
+  {
+    path: '/Wode',
+    name: 'Wode',
+    component: Wode,
+    children:[
+    ]
+  },
+  {
+    path: '/Ctiry',
+    name: 'Ctiry',
+    component: Ctiry
+  },
+  {
+    path: '/Logo',
+    name: 'Logo',
+    component: Logo
+  },
+
+{
+    path: '/Sousuo',
+    name: 'Sousuo',
+    component: Sousuo
+  },
+  {
+    path: '/Msite',
+    name: 'Msite',
+    component: Msite
+  },
+ 
+
+ 
 ]
 
 const router = new VueRouter({
